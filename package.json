@@ -1,0 +1,22 @@
+{
+  "name": "individual-project-roq",
+  "version": "1.0.0",
+  "description": "Individual Project ROQ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echow11/individual-project-ROQ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/echow11/individual-project-ROQ/issues"
+  },
+  "homepage": "https://github.com/echow11/individual-project-ROQ#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
