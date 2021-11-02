@@ -10,6 +10,7 @@ class Person {
     thirstQuenched()
     {
         this.thirsty = false;
+        return this.thirsty;
     }
     thirsty()
     {
@@ -25,6 +26,7 @@ class Person {
     hungryStill()
     {
         this.hungry = false;
+        return this.hungry;
     }
     hungry()
     {
@@ -52,11 +54,11 @@ class Drink{
         {
             this.glassEmpty = true;
             this.glassClean = false;
-            return `${currentPerson} is enjoying their favourite drink. Their favourite drink is ${this.whichDrink}!`
+            return `${currentPerson} is enjoying their favourite drink. Their favourite drink is ${this.whichDrink}!`;
         }
         else
         {
-            return `The glass is empty, fill it for ${currentPerson} to enjoy!`
+            return `The glass is empty, fill it for ${currentPerson} to enjoy!`;
         }
     }
     refill(currentPerson, currentPersonFavouriteDrink){
@@ -64,7 +66,7 @@ class Drink{
         {
             this.glassEmpty = false;
             this.whichDrink = currentPersonFavouriteDrink;
-            return `The glass has been refilled for ${currentPerson}!`
+            return `The glass has been refilled for ${currentPerson}!`;
         }
         else
         {
@@ -75,23 +77,23 @@ class Drink{
     {
         if(this.glassEmpty == false)
         {
-            return `This glass has been filled with ${this.whichDrink}, for ${currentPerson}`
+            return `This glass has been filled with ${this.whichDrink}, for ${currentPerson}!`;
         }
         else
         {
-            return "This glass is not currently filled with anything."
+            return "This glass is not currently filled with anything.";
         }
     }
     washGlass()
     {
-        if(this.glassClean == false)
+        if(this.glassClean == false && this.glassEmpty == true)
         {
-            this.glassClean = true
-            return "The glass is now clean!"
+            this.glassClean = true;
+            return "The glass is now clean!";
         }
         else
         {
-            return "The glass does not need to be currently washed"
+            return "The glass does not need to be currently washed";
         }
     }
 }
@@ -110,11 +112,11 @@ class Food{
         {
             this.plateEmpty = true;
             this.plateClean = false;
-            return `${currentPerson} is enjoying their favourite food. Their favourite food is ${this.whichDish}!`
+            return `${currentPerson} is enjoying their favourite food. Their favourite food is ${this.whichDish}!`;
         }
         else
         {
-            return `The plate is empty, fill it for ${currentPerson} to enjoy!`
+            return `The plate is empty, fill it for ${currentPerson} to enjoy!`;
         }
     }
     makeDish(currentPerson, currentPersonFavouriteDish)
@@ -123,34 +125,34 @@ class Food{
         {
             this.plateEmpty = false;
             this.whichDish = currentPersonFavouriteDish;
-            return `The dish has been made for ${currentPerson}!`
+            return `The dish has been made for ${currentPerson}!`;
         }
         else
         {
-            return "The plate is already full!"
+            return "The plate is already full!";
         }
     }
-    whichDish(currentPerson)
+    whichDishPrepped(currentPerson)
     {
         if(this.plateEmpty == false)
         {
-            return `This glass has been filled with ${whichDish}, for ${currentPerson}`
+            return `This plate has been filled with ${this.whichDish}. For ${currentPerson}!`;
         }
         else
         {
-            return "This plate is not currently filled with anything."
+            return "This plate is not currently filled with anything.";
         }
     }
     washPlate()
     {
-        if(this.plateClean == false)
+        if(this.plateClean == false && this.plateEmpty == true)
         {
-            this.plateClean = true
-            return "The plate is now clean!"
+            this.plateClean = true;
+            return "The plate is now clean!";
         }
         else
         {
-            return "The plate does not need to be currently washed"
+            return "The plate does not need to be currently washed";
         }
     }
 }
