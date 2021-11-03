@@ -26,7 +26,7 @@ describe('Fred Food Tests', ()=>{
         expect(classIndexFred.Fred.hungryStill()).toBe(false);
     });
 
-    test("test if Fred can refill the glass and find out it's contents", ()=>{
+    test("test if Fred can make the dish and find out it's contents", ()=>{
         classIndexFred.plate.makeDish(classIndexFred.Fred.name, classIndexFred.Fred.favouriteFood);
         expect(classIndexFred.plate.whichDishPrepped(classIndexFred.Fred.name)).toBe("This plate has been filled with Sushi. For Fred!");
     }); 
